@@ -5,7 +5,8 @@ from django.conf.urls.static import static
 from .views import *
 
 urlpatterns = [
-    path('image_upload',crop_image, name = 'image_upload'), 
+    path('image_upload',crop_image, name = 'image_upload'),
+    path('get_price',get_price,name='get_price') 
 ]
 if settings.DEBUG: 
         urlpatterns += static(settings.MEDIA_URL, 
